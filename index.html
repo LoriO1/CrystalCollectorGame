@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- browser fav icon and title bar info -->
+    <link rel="icon" href="assets/images/crystal_bonus.png">
+    <title>Crystal Collector Game | My Little Pony Elements of Harmony</title>
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+
+    <!-- Link to the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- fonts --> 
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One|Oxygen:400,700" rel="stylesheet">
+    
+</head>
+
+<body>
+    <!-- header/nav masthead bar -->
+    <header id="masthead" class="container">
+        <div id="headerMainRow" class="row">
+            <div id="headerMainColLeft" class="col-md-3 col-lg-3 col-xl-3">
+                <div id="headerLogoRow" class="row">
+                    <div id="headerLogoCol" class="col-md-12 col-lg-12 col-xl-12">
+                        <a href="index.html" target="blank" alt="My Little Pony logo"><img src="assets/images/ponyLogo.png"id="logo"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="headerMainColRight" class="col-md-9 col-lg-9 col-xl-9">
+                <div id="gameName" class="row">
+                    Elements of Harmony Crystal Collector
+                </div>
+                <div id="gameRules" class="row">
+                    <p id="gameText">At the start of each game, you'll be given a random number to match.</p>
+                    <p id="gameText">By clicking one of the four crystals below, you earn a specific amount of points. The value of each crystal is hidden until you click on it. At the start of each game, the values of the crystals will be different than the last game.</p>
+                    <p id="gameText">To win the game, you need to earn the exact amount of points to match the random number you were given at the beginning of the game. If your score goes above the random number, you lose the game.</p>
+                </div>                                                     
+            </div>
+        </div>        
+    </header>
+
+    <!-- main body and content -->
+    <div class="wrapper">
+        <div id="mainContainer" class="container">
+            <div class="row">
+                    <h2 id="startDisplay">submit a player name to start</h2>
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                    <div class="row">
+                        <!-- player info panel -->                        
+                        <div id="playerInfo" class="col-md-12 col-lg-12 col-xl-12">                            
+                            <div class="input-group mb-3">                               
+                                <!--player name form and submit button -->
+                                <form id="playerForm">
+                                    <div class="form-row align-items-center">
+                                        <div class="col-12">
+                                            <label class="sr-only" for="inlineFormInputGroupUsername">player name</label>
+                                            <div class="input-group">                                         
+                                                <input type="text" class="form-control" id="playername" placeholder="player name">         <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- scoreboard -->
+                            <div id="scoreboard" class="container">
+                                <label for="basic-url"><h3 id="WinsLosses">WINS & LOSSES</h3></label>
+                                <p>Wins: <span id="wins">0</span></p>
+                                <p>Losses: <span id="losses">0</span></p>                            
+                            </div>
+                            <!-- guesses remaining -->
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><h4 id="guesses">GUESSES LEFT</h4></span>
+                                </div>
+                                <span id="guessesRemaining">
+                                    <!-- pulls in countdown from JavaScript -->                                        
+                                </span>
+                            </div>                                                 
+                        </div>
+                    </div>                
+                </div>
+                <!-- gameInfo - ie movie title, related gif, underlines, spacing between words in a movie title, -->
+                <div class="col-md-9 col-lg-9 col-xl-9">
+                    <div class="row">
+                        <div id="gameInfo" class="col-md-12">
+                            <p><h3>Number to Match</h3></p>
+                                <div id="movie" class="titleUnderlinesSpaces">
+                                    <!-- spaces between underlines for words in a movie title - see CSS -->                                    
+                                </div>
+                                    <br/> 
+                                <div id="gifs"></div> 
+                            <p ><h3 id="wrongLetters">Crystals</h3></p>                                
+                            <div id="crystalPics"></div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+
+        <!-- special div related to footer - DO NOT MOVE! -->
+        <div class="push"></div>
+        <!-- end special div -->
+
+        
+    </div>    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            &copy; 2019 Lori Orzechowski
+        </div>
+    </footer>
+
+    <!-- JavaScript for Bootstrap-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Hangman JavaScript-->    
+    <script src="assets/javascript/game.js"></script>
+
+</body>
+</html>
