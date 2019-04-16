@@ -250,6 +250,18 @@ h3 {
     color: #f1f894;
 }
 
+#magicTitle {
+    font-family: 'Lilita One', cursive;
+    font-weight: normal;
+    font-size: 36px;
+    padding-left: 1%;
+    color: #f1f894;
+}
+
+.magicContainer {
+    margin-top: 20px;
+}
+
 #WinsLosses {    
     font-size: 30px;    
     text-align: center;
